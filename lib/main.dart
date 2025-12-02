@@ -11,7 +11,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            "Timer App",
+            style: TextStyle(fontSize: 30, color: Colors.black),
+          ),
+        ),
+      ),
     );
   }
 }
