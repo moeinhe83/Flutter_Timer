@@ -17,7 +17,12 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blueAccent,
           title: const Text(
             "Timer App",
-            style: TextStyle(fontSize: 30, color: Colors.black),
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.black,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),
