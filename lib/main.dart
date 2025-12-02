@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.blueAccent,
           title: const Text(
             "Timer App",
             style: TextStyle(fontSize: 30, color: Colors.black),
