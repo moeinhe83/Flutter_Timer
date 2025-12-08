@@ -67,11 +67,26 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("00"),
-              Text(":"),
-              Text("00"),
-              Text(":"),
-              Text("00"),
+              Text(
+                "00",
+                style: TextStyle(fontSize: 40, color: Colors.black),
+              ),
+              Text(
+                ":",
+                style: TextStyle(fontSize: 40, color: Colors.black),
+              ),
+              Text(
+                "00",
+                style: TextStyle(fontSize: 40, color: Colors.black),
+              ),
+              Text(
+                ":",
+                style: TextStyle(fontSize: 40, color: Colors.black),
+              ),
+              Text(
+                "00",
+                style: TextStyle(fontSize: 40, color: Colors.black),
+              ),
             ],
           ),
         ],
