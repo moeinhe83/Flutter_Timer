@@ -105,7 +105,7 @@ class Info extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AppBar(title: Text("Timer About")),
+      home: AppBar(title: Text("Timer About", style: moeinstyle2)),
     );
   }
 }
