@@ -44,7 +44,16 @@ class _HomePageState extends State<HomePage> {
         color: Colors.blueAccent,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
+          children: <Widget>[
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.watch_later,
+                color: Colors.black,
+                size: 30,
+              ),
+            ),
+          ],
         ),
       ),
     );
