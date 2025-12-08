@@ -72,7 +72,6 @@ class _HomePageState extends State<HomePage> {
               Text("00"),
               Text(":"),
               Text("00"),
-              Text(":"),
             ],
           ),
         ],
