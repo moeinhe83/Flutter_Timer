@@ -105,16 +105,22 @@ class Info extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.backspace, size: 30, color: Colors.black),
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blueAccent,
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.backspace,
+              size: 30,
+              color: Colors.black,
+            ),
+          ),
+          centerTitle: true,
+          title: Text("Timer About", style: moeinstyle2),
         ),
-        backgroundColor: Colors.blueAccent,
-        centerTitle: true,
-        title: Text("Timer About", style: moeinstyle2),
       ),
     );
   }
