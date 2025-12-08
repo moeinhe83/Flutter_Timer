@@ -34,7 +34,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => info()),
+            );
+          },
           icon: Icon(Icons.info, size: 40, color: Colors.black),
         ),
         centerTitle: true,
