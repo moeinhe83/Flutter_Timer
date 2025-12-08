@@ -5,7 +5,7 @@ void main() {
 }
 
 // ==================== /* moeinstyle For Text */ ====================
-const moeinstyle1 = TextStyle(fontSize: 40, color: Colors.black);
+const moeinstyle1 = TextStyle(fontSize: 80, color: Colors.black);
 
 // ==================== /* MyApp */ ====================
 class MyApp extends StatelessWidget {
