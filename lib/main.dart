@@ -6,6 +6,7 @@ void main() {
 
 // ==================== /* moeinstyle For Text */ ====================
 const moeinstyle1 = TextStyle(fontSize: 80, color: Colors.black);
+const moeinstyle2 = TextStyle(fontSize: 30, color: Colors.black);
 
 // ==================== /* MyApp */ ====================
 class MyApp extends StatelessWidget {
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => info()),
+              MaterialPageRoute(builder: (context) => Info()),
             );
           },
           icon: Icon(Icons.info, size: 40, color: Colors.black),
@@ -92,6 +93,19 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+    );
+  }
+}
+
+// ==================== /* info StatelessWidget */ ====================
+class Info extends StatelessWidget {
+  const Info({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: AppBar(title: Text("Timer About")),
     );
   }
 }
