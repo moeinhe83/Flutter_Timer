@@ -33,6 +33,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.info, size: 40, color: Colors.black),
+        ),
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
         title: const Text(
