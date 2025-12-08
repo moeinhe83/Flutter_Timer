@@ -46,6 +46,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             IconButton(
+              tooltip: "StopWatch",
               onPressed: () {},
               icon: Icon(
                 Icons.watch_later,
@@ -55,6 +56,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(width: 50),
             IconButton(
+              tooltip: "Timer",
               onPressed: () {},
               icon: Icon(Icons.timer, size: 30, color: Colors.black),
             ),
