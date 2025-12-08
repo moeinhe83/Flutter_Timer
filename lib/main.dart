@@ -4,6 +4,8 @@ void main() {
   runApp(MyApp());
 }
 
+const moeinstyle1 = TextStyle(fontSize: 40, color: Colors.black);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -69,26 +71,11 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                "00",
-                style: TextStyle(fontSize: 60, color: Colors.black),
-              ),
-              Text(
-                ":",
-                style: TextStyle(fontSize: 60, color: Colors.black),
-              ),
-              Text(
-                "00",
-                style: TextStyle(fontSize: 60, color: Colors.black),
-              ),
-              Text(
-                ":",
-                style: TextStyle(fontSize: 60, color: Colors.black),
-              ),
-              Text(
-                "00",
-                style: TextStyle(fontSize: 60, color: Colors.black),
-              ),
+              Text("00", style: moeinstyle1),
+              Text(":", style: moeinstyle1),
+              Text("00", style: moeinstyle1),
+              Text(":", style: moeinstyle1),
+              Text("00", style: moeinstyle1),
             ],
           ),
         ],
