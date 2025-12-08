@@ -53,6 +53,7 @@ class _HomePageState extends State<HomePage> {
                 size: 30,
               ),
             ),
+            SizedBox(width: 50),
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.timer, size: 30, color: Colors.black),
