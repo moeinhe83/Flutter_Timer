@@ -61,6 +61,22 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text("00"),
+              Text(":"),
+              Text("00"),
+              Text(":"),
+              Text("00"),
+              Text(":"),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
