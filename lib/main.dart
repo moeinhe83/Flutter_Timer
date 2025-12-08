@@ -11,18 +11,32 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Colors.blueAccent,
-          title: const Text(
-            "Timer App",
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.black,
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.bold,
-            ),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.blueAccent,
+        title: const Text(
+          "Timer App",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.black,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
