@@ -4,8 +4,10 @@ void main() {
   runApp(MyApp());
 }
 
+// ==================== /* moeinstyle For Text */ ====================
 const moeinstyle1 = TextStyle(fontSize: 40, color: Colors.black);
 
+// ==================== /* MyApp */ ====================
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// ==================== /* HomePage StatefulWidget */ ====================
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
