@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               TextButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
+                  backgroundColor: WidgetStateProperty.all(
                     Colors.amber,
                   ),
                 ),
@@ -135,8 +135,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(width: 20),
               TextButton(
                 style: ButtonStyle(
-                  // ignore: deprecated_member_use
-                  backgroundColor: MaterialStateProperty.all(
+                  backgroundColor: WidgetStateProperty.all(
                     Colors.amber,
                   ),
                 ),
@@ -201,7 +200,10 @@ class Info extends StatelessWidget {
                 child: const Center(
                   child: Text(
                     "moeinit.com",
-                    style: TextStyle(fontSize: 30),
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),
