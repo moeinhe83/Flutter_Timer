@@ -192,19 +192,38 @@ class Info extends StatelessWidget {
               padding: const EdgeInsets.all(50.0),
               child: Container(
                 height: 100,
-                width: 250,
+                width: 300,
                 decoration: BoxDecoration(
                   color: Colors.cyanAccent,
                   borderRadius: BorderRadius.circular(30),
                 ),
-                child: const Center(
-                  child: Text(
-                    "moeinit.com",
-                    style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.black,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      "moeinit.com 💻",
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.black,
+                      ),
                     ),
-                  ),
+                    SizedBox(height: 20),
+                    TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(
+                          Colors.amber,
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        "Open moeinit.com",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
