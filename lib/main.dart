@@ -91,6 +91,37 @@ class _HomePageState extends State<HomePage> {
               Text("00", style: moeinstyle1),
             ],
           ),
+          SizedBox(height: 40),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              TextButton(
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(
+                    Colors.amber,
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(
+                  "Start",
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+              ),
+              SizedBox(width: 20),
+              TextButton(
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(
+                    Colors.amber,
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(
+                  "Reset",
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
