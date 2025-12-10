@@ -112,11 +112,20 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(second.toString(), style: moeinstyle1),
+              Text(
+                second.toString().padLeft(2, '0'),
+                style: moeinstyle1,
+              ),
               Text(":", style: moeinstyle1),
-              Text(minutes.toString(), style: moeinstyle1),
+              Text(
+                minutes.toString().padLeft(2, '0'),
+                style: moeinstyle1,
+              ),
               Text(":", style: moeinstyle1),
-              Text(hours.toString(), style: moeinstyle1),
+              Text(
+                hours.toString().padLeft(2, '0'),
+                style: moeinstyle1,
+              ),
             ],
           ),
           const SizedBox(height: 40),
