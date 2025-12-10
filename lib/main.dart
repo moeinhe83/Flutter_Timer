@@ -1,28 +1,45 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 // ==================== /* moeinstyle For Text */ ====================
-const moeinstyle1 = TextStyle(fontSize: 80, color: Colors.white);
+const moeinstyle1 = TextStyle(fontSize: 80, color: Colors.cyan);
 
 // ==================== /* MyApp */ ====================
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  ThemeMode _themeMode = ThemeMode.dark;
+
+  void toggleTheme(bool isDark) {
+    setState(() {
+      _themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: _themeMode,
+      home: HomePage(onThemeChanged: toggleTheme),
     );
   }
 }
 
 // ==================== /* HomePage StatefulWidget */ ====================
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final Function(bool) onThemeChanged;
+  const HomePage({super.key, required this.onThemeChanged});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -32,16 +49,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 34, 34, 34),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Info()),
+              MaterialPageRoute(builder: (context) => const Info()),
             );
           },
-          icon: Icon(Icons.info, size: 40, color: Colors.amber),
+          icon: const Icon(Icons.info, size: 40, color: Colors.amber),
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
@@ -54,15 +71,21 @@ class _HomePageState extends State<HomePage> {
             fontWeight: FontWeight.bold,
           ),
         ),
+        actions: [
+          Switch(
+            value: Theme.of(context).brightness == Brightness.dark,
+            onChanged: widget.onThemeChanged,
+          ),
+        ],
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.transparent,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: const <Widget>[
             IconButton(
               tooltip: "StopWatch",
-              onPressed: () {},
+              onPressed: null,
               icon: Icon(
                 Icons.watch_later,
                 color: Colors.amber,
@@ -72,7 +95,7 @@ class _HomePageState extends State<HomePage> {
             SizedBox(width: 100),
             IconButton(
               tooltip: "Timer",
-              onPressed: () {},
+              onPressed: null,
               icon: Icon(Icons.timer, size: 30, color: Colors.amber),
             ),
           ],
@@ -83,7 +106,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            children: const <Widget>[
               Text("00", style: moeinstyle1),
               Text(":", style: moeinstyle1),
               Text("00", style: moeinstyle1),
@@ -91,31 +114,32 @@ class _HomePageState extends State<HomePage> {
               Text("00", style: moeinstyle1),
             ],
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextButton(
                 style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(
+                  backgroundColor: MaterialStateProperty.all(
                     Colors.amber,
                   ),
                 ),
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Start",
                   style: TextStyle(fontSize: 30, color: Colors.black),
                 ),
               ),
-              SizedBox(width: 20),
+              const SizedBox(width: 20),
               TextButton(
                 style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(
+                  // ignore: deprecated_member_use
+                  backgroundColor: MaterialStateProperty.all(
                     Colors.amber,
                   ),
                 ),
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Reset",
                   style: TextStyle(fontSize: 30, color: Colors.black),
                 ),
@@ -128,62 +152,59 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-// ==================== /* info StatelessWidget */ ====================
+// ==================== /* Info StatelessWidget */ ====================
 class Info extends StatelessWidget {
   const Info({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 41, 41, 41),
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(
-              Icons.backspace,
-              size: 30,
-              color: Colors.amber,
-            ),
-          ),
-          centerTitle: true,
-          title: Text(
-            "About Timer App",
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.amber,
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.bold,
-            ),
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 41, 41, 41),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.backspace,
+            size: 30,
+            color: Colors.amber,
           ),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(50.0),
-                child: Container(
-                  height: 100,
-                  width: 250,
-                  decoration: BoxDecoration(
-                    color: Colors.cyanAccent,
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "moeinit.com",
-                      style: TextStyle(fontSize: 30),
-                    ),
+        centerTitle: true,
+        title: const Text(
+          "About Timer App",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.amber,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(50.0),
+              child: Container(
+                height: 100,
+                width: 250,
+                decoration: BoxDecoration(
+                  color: Colors.cyanAccent,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: const Center(
+                  child: Text(
+                    "moeinit.com",
+                    style: TextStyle(fontSize: 30),
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
