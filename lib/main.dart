@@ -5,7 +5,7 @@ void main() {
 }
 
 // ==================== /* moeinstyle For Text */ ====================
-const moeinstyle1 = TextStyle(fontSize: 80, color: Colors.black);
+const moeinstyle1 = TextStyle(fontSize: 80, color: Colors.white);
 
 // ==================== /* MyApp */ ====================
 class MyApp extends StatelessWidget {
@@ -32,6 +32,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 34, 34, 34),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -40,22 +41,22 @@ class _HomePageState extends State<HomePage> {
               MaterialPageRoute(builder: (context) => Info()),
             );
           },
-          icon: Icon(Icons.info, size: 40, color: Colors.black),
+          icon: Icon(Icons.info, size: 40, color: Colors.amber),
         ),
         centerTitle: true,
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.transparent,
         title: const Text(
           "Timer App",
           style: TextStyle(
             fontSize: 30,
-            color: Colors.black,
+            color: Colors.amber,
             fontStyle: FontStyle.italic,
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.blueAccent,
+        color: Colors.transparent,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -64,15 +65,15 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {},
               icon: Icon(
                 Icons.watch_later,
-                color: Colors.black,
+                color: Colors.amber,
                 size: 30,
               ),
             ),
-            SizedBox(width: 50),
+            SizedBox(width: 100),
             IconButton(
               tooltip: "Timer",
               onPressed: () {},
-              icon: Icon(Icons.timer, size: 30, color: Colors.black),
+              icon: Icon(Icons.timer, size: 30, color: Colors.amber),
             ),
           ],
         ),
@@ -121,7 +122,12 @@ class Info extends StatelessWidget {
           centerTitle: true,
           title: Text(
             "About Timer App",
-            style: TextStyle(fontSize: 30, color: Colors.amber),
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.amber,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         body: Center(
