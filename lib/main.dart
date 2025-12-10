@@ -106,8 +106,9 @@ class Info extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.grey[700],
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Colors.transparent,
           leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
@@ -121,9 +122,26 @@ class Info extends StatelessWidget {
           centerTitle: true,
           title: Text("Timer About", style: moeinstyle2),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(50.0),
+                child: Container(
+                  height: 100,
+                  width: 250,
+                  decoration: BoxDecoration(
+                    color: Colors.cyanAccent,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Center(
+                    child: Text("moeinit.com", style: moeinstyle2),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
