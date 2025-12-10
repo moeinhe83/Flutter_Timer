@@ -74,8 +74,7 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           Switch(
-            // ignore: deprecated_member_use
-            activeColor: Colors.white,
+            activeThumbColor: Colors.white,
             value: Theme.of(context).brightness == Brightness.dark,
             onChanged: widget.onThemeChanged,
           ),
