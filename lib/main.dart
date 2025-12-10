@@ -47,6 +47,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int second = 0;
+  int minutes = 0;
+  int hours = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -108,12 +111,12 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const <Widget>[
-              Text("00", style: moeinstyle1),
+            children: <Widget>[
+              Text(second.toString(), style: moeinstyle1),
               Text(":", style: moeinstyle1),
-              Text("00", style: moeinstyle1),
+              Text(minutes.toString(), style: moeinstyle1),
               Text(":", style: moeinstyle1),
-              Text("00", style: moeinstyle1),
+              Text(hours.toString(), style: moeinstyle1),
             ],
           ),
           const SizedBox(height: 40),
