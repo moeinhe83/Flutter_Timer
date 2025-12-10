@@ -157,8 +157,7 @@ class _HomePageState extends State<HomePage> {
 // ==================== /* Info StatelessWidget */ ====================
 class Info extends StatelessWidget {
   const Info({super.key});
-  // ignore: unused_element
-  Future<void> _moeinitOopen() async {
+  Future<void> _openmoeinit() async {
     final Uri url = Uri.parse("https://moeinit.com");
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       throw Exception("Could not launch $url");
@@ -222,7 +221,7 @@ class Info extends StatelessWidget {
                           Colors.amber,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: _openmoeinit,
                       child: Text(
                         "Open moeinit.com",
                         style: TextStyle(
