@@ -121,6 +121,10 @@ class Info extends StatelessWidget {
           centerTitle: true,
           title: Text("Timer About", style: moeinstyle2),
         ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[],
+        ),
       ),
     );
   }
