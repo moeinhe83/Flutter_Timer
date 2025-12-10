@@ -50,6 +50,7 @@ class _HomePageState extends State<HomePage> {
   int second = 0;
   int minutes = 0;
   int hours = 0;
+  Duration mydur = Duration(seconds: 0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
