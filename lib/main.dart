@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -156,6 +157,13 @@ class _HomePageState extends State<HomePage> {
 // ==================== /* Info StatelessWidget */ ====================
 class Info extends StatelessWidget {
   const Info({super.key});
+  // ignore: unused_element
+  Future<void> _moeinitOopen() async {
+    final Uri url = Uri.parse("https://moeinit.com");
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception("Could not launch $url");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
