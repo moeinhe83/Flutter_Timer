@@ -6,7 +6,6 @@ void main() {
 
 // ==================== /* moeinstyle For Text */ ====================
 const moeinstyle1 = TextStyle(fontSize: 80, color: Colors.black);
-const moeinstyle2 = TextStyle(fontSize: 30, color: Colors.black);
 
 // ==================== /* MyApp */ ====================
 class MyApp extends StatelessWidget {
@@ -106,7 +105,7 @@ class Info extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.grey[700],
+        backgroundColor: const Color.fromARGB(255, 41, 41, 41),
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           leading: IconButton(
@@ -116,11 +115,14 @@ class Info extends StatelessWidget {
             icon: Icon(
               Icons.backspace,
               size: 30,
-              color: Colors.black,
+              color: Colors.amber,
             ),
           ),
           centerTitle: true,
-          title: Text("Timer About", style: moeinstyle2),
+          title: Text(
+            "About Timer App",
+            style: TextStyle(fontSize: 30, color: Colors.amber),
+          ),
         ),
         body: Center(
           child: Column(
@@ -136,7 +138,10 @@ class Info extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Center(
-                    child: Text("moeinit.com", style: moeinstyle2),
+                    child: Text(
+                      "moeinit.com",
+                      style: TextStyle(fontSize: 30),
+                    ),
                   ),
                 ),
               ),
