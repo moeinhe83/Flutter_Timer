@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                     isActive ? Colors.red : Colors.green,
                   ),
                 ),
-                onPressed: start,
+                onPressed: isActive ? stop : start,
                 child: Text(
                   isActive ? "Stop" : "Start",
                   style: TextStyle(fontSize: 30, color: Colors.black),
