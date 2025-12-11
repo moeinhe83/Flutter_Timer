@@ -41,3 +41,5 @@ flutter pub get
 # Run the app on your desired platform
 flutter run -d windows   # For Windows
 flutter run -d android   # For Android
+
+![Flutter Logo](assets/image/moeinit.png)
