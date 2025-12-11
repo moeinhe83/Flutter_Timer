@@ -16,4 +16,24 @@ Developed by [moeinhe83](https://github.com/moeinhe83), the main goal of this pr
 - Minimal and clean design with readable colors (Amber, Cyan)
 - Cross-platform support (Android, Windows, Linux, macOS, Web)
 
-## Project Structure
+## Getting Started
+
+### Prerequisites
+- Install [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- Install Android Studio or VS Code with Flutter/Dart plugins
+- Emulator or device for testing (Android Emulator, Windows Desktop, etc.)
+
+### Run the App
+```bash
+# Clone the repository
+git clone https://github.com/moeinhe83/Flutter_Timer.git
+
+# Navigate into the project folder
+cd Flutter_Timer
+
+# Get dependencies
+flutter pub get
+
+# Run the app on your desired platform
+flutter run -d windows   # For Windows
+flutter run -d android   # For Android
