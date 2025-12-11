@@ -53,10 +53,12 @@ class _HomePageState extends State<HomePage> {
   int minute = 0;
   int hour = 0;
   Duration mydur = Duration(seconds: 0);
+  bool isActive = false;
 
   Timer? timer;
 
   void start() {
+    isActive = true;
     timer = Timer.periodic(Duration(seconds: 1), (timer) {
       final seconds = mydur.inSeconds + 1;
       mydur = Duration(seconds: seconds);
@@ -130,12 +132,12 @@ class _HomePageState extends State<HomePage> {
               TextButton(
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(
-                    Colors.amber,
+                    isActive ? Colors.red : Colors.green,
                   ),
                 ),
                 onPressed: start,
-                child: const Text(
-                  "Start",
+                child: Text(
+                  isActive ? "Stop" : "Start",
                   style: TextStyle(fontSize: 30, color: Colors.black),
                 ),
               ),
