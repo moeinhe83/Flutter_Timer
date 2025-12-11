@@ -84,29 +84,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.transparent,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            IconButton(
-              tooltip: "StopWatch",
-              onPressed: null,
-              icon: Icon(
-                Icons.watch_later,
-                color: Colors.amber,
-                size: 30,
-              ),
-            ),
-            SizedBox(width: 100),
-            IconButton(
-              tooltip: "Timer",
-              onPressed: null,
-              icon: Icon(Icons.timer, size: 30, color: Colors.amber),
-            ),
-          ],
-        ),
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
