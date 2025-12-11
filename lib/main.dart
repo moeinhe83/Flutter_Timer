@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                     Colors.amber,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: Start,
                 child: const Text(
                   "Start",
                   style: TextStyle(fontSize: 30, color: Colors.black),
