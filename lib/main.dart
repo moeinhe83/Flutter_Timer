@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -51,6 +53,13 @@ class _HomePageState extends State<HomePage> {
   int minutes = 0;
   int hours = 0;
   Duration mydur = Duration(seconds: 0);
+
+  Timer? timer;
+
+  void Start() {
+    Timer.periodic(Duration(seconds: 1), (timer) {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
