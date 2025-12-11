@@ -18,6 +18,10 @@ Developed by [moeinhe83](https://github.com/moeinhe83), the main goal of this pr
 
 ## Getting Started
 
+# Images For App
+![Flutter Logo](assets/image/page1.png)
+![Flutter Logo](assets/image/page2.png)
+
 ### Prerequisites
 - Install [Flutter SDK](https://flutter.dev/docs/get-started/install)
 - Install Android Studio or VS Code with Flutter/Dart plugins
@@ -37,8 +41,3 @@ flutter pub get
 # Run the app on your desired platform
 flutter run -d windows   # For Windows
 flutter run -d android   # For Android
-
-
-# Images For App
-![Flutter Logo](assets/image/page1.png)
-![Flutter Logo](assets/image/page2.png)
