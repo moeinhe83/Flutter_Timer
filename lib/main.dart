@@ -165,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                     Colors.amber,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: reset,
                 child: const Text(
                   "Reset",
                   style: TextStyle(fontSize: 30, color: Colors.black),
