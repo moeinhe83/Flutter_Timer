@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
 
   Timer? timer;
 
-  void Start() {
+  void start() {
     timer = Timer.periodic(Duration(seconds: 1), (timer) {
       final seconds = mydur.inSeconds + 1;
       mydur = Duration(seconds: seconds);
@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                     Colors.amber,
                   ),
                 ),
-                onPressed: Start,
+                onPressed: start,
                 child: const Text(
                   "Start",
                   style: TextStyle(fontSize: 30, color: Colors.black),
