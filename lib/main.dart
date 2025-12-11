@@ -50,14 +50,22 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int second = 0;
-  int minutes = 0;
-  int hours = 0;
+  int minute = 0;
+  int hour = 0;
   Duration mydur = Duration(seconds: 0);
 
   Timer? timer;
 
   void Start() {
-    Timer.periodic(Duration(seconds: 1), (timer) {});
+    timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      final seconds = mydur.inSeconds + 1;
+      mydur = Duration(seconds: seconds);
+      setState(() {
+        second = mydur.inSeconds.remainder(60);
+        minute = mydur.inMinutes.remainder(60);
+        hour = mydur.inHours.remainder(24);
+      });
+    });
   }
 
   @override
@@ -105,12 +113,12 @@ class _HomePageState extends State<HomePage> {
               ),
               Text(":", style: moeinstyle1),
               Text(
-                minutes.toString().padLeft(2, '0'),
+                minute.toString().padLeft(2, '0'),
                 style: moeinstyle1,
               ),
               Text(":", style: moeinstyle1),
               Text(
-                hours.toString().padLeft(2, '0'),
+                hour.toString().padLeft(2, '0'),
                 style: moeinstyle1,
               ),
             ],
