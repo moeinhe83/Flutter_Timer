@@ -57,6 +57,13 @@ class _HomePageState extends State<HomePage> {
 
   Timer? timer;
 
+  void stop() {
+    timer?.cancel();
+    setState(() {
+      isActive = false;
+    });
+  }
+
   void start() {
     isActive = true;
     timer = Timer.periodic(Duration(seconds: 1), (timer) {
