@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                second.toString().padLeft(2, '0'),
+                hour.toString().padLeft(2, '0'),
                 style: moeinstyle1,
               ),
               Text(":", style: moeinstyle1),
@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Text(":", style: moeinstyle1),
               Text(
-                hour.toString().padLeft(2, '0'),
+                second.toString().padLeft(2, '0'),
                 style: moeinstyle1,
               ),
             ],
