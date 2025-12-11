@@ -223,7 +223,7 @@ class Info extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(50.0),
               child: Container(
-                height: 100,
+                height: 400,
                 width: 300,
                 decoration: BoxDecoration(
                   color: Colors.cyanAccent,
@@ -253,6 +253,16 @@ class Info extends StatelessWidget {
                           fontSize: 20,
                           color: Colors.black,
                         ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      "Name = Timer App",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 25,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
