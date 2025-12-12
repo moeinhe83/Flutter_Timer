@@ -35,11 +35,11 @@ git clone https://github.com/moeinhe83/Flutter_Timer.git
 # Navigate into the project folder
 cd Flutter_Timer
 
-# Get dependencies
+# Get Dependencies
 flutter pub get
 
-# Run the app on your desired platform
-flutter run -d windows   # For Windows
-flutter run -d android   # For Android
+# Run The App
+flutter run 
+
 ```
 ![Flutter Logo](assets/image/moeinit.png)
